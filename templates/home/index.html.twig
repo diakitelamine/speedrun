@@ -1,0 +1,197 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+ <div class="container">
+  <div class="jumbotron mt-3" style="background-color: #302d42">
+     <h1 class="display-3">Bienvue sur Speed Run</h1>
+      <p class="lead">Un coach succé assuré !</p>
+      <hr class="my-4">
+     <p>Un programme personnalisé adapté a tous les niveaux</p>
+     <p class="lead">
+     </p>
+   </div>  
+
+     <h2 class="text-center"> Nos recettes </h2>
+
+     <div class="row mt-5">
+          <div class="col-md-4" >
+              <div class="card bg-light mb-3">
+                    <div class="card-header text-center" style="background-color: #302d42">
+                        <strong> Kebab </strong> <br>
+                       <small> pas encore noté </small>
+                    </div>
+                    <img src="/images/recette1.PNG" alt="Image de la recette"
+                    style="height:200PX, width: 100%; display: block" >
+                    <div class="card-body" style="background-color: #302d42">
+                        <h4 class="card-title">
+                           Programme de ouf !
+                        </h4>
+                        <p class="card-text">
+                              Un accès illimité aux séances de votre programme, un suivi de vos progrès en temps réel
+                             et un programme nutrition complet 
+                        </p>
+                        <a href="{{path('programme_index')}}" class="btn btn-primary"> En savoir plus !</a>
+                    </div>
+            </div>
+              
+        </div>
+          <div class="col-md-4">
+              <div class="card bg-light mb-3">
+                    <div class="card-header text-center" style="background-color: #302d42">
+                     <strong> Salade </strong> <br>
+                       <small> pas encore noté </small>
+                    </div>
+                    <img src="/images/recette2.PNG" alt="Image de la recette"
+                    style="height:200PX, width: 100%; display: block" >
+                    <div class="card-body" style="background-color: #302d42">
+                        <h4 class="card-title">
+                           Programme de ouf !
+                        </h4>
+                        <p class="card-text">
+                              Un accès illimité aux séances de votre programme, un suivi de vos progrès en temps réel
+                             et un programme nutrition complet 
+                        </p>
+                        <a href="{{path('programme_index')}}" class="btn btn-primary"> En savoir plus !</a>
+                    </div>
+            </div>
+              
+        </div>
+          <div class="col-md-4">
+              <div class="card bg-light mb-3">
+                    <div class="card-header text-center" style="background-color: #302d42">
+                       <strong> Tacos </strong> <br>
+                       <small> pas encore noté </small>
+                    </div>
+                    <img src="/images/recette3.PNG" alt="Image de la recette"
+                    style="height:200PX, width: 100%; display: block" >
+                    <div class="card-body" style="background-color: #302d42">
+                        <h4 class="card-title">
+                           Programme de ouf !
+                        </h4>
+                        <p class="card-text">
+                              Un accès illimité aux séances de votre programme, un suivi de vos progrès en temps réel
+                             et un programme nutrition complet 
+                        </p>
+                        <a href="{{path('programme_index')}}" class="btn btn-primary"> En savoir plus !</a>
+                    </div>  
+            </div>
+              
+        </div>
+          
+
+     </div>
+
+
+     <h2 class="text-center"> Nos exercices </h2>
+
+     <div class="row mt-5">
+          <div class="col-md-4">
+              <div class="card bg-light mb-3">
+                    <div class="card-header text-center" style="background-color: #302d42">
+                       <strong> Traction avec pronation </strong> <br>
+                       <small> pas encore noté </small>
+                    </div>
+                    <img src="/images/sport6.PNG" alt="Image de la recette"
+                    style="height:200PX, width: 100%; display: block" >
+                    <div class="card-body" style="background-color: #302d42">
+                        <h4 class="card-title">
+                           Programme de ouf !
+                        </h4>
+                        <p class="card-text">
+                              Un accès illimité aux séances de votre programme, un suivi de vos progrès en temps réel
+                             et un programme nutrition complet 
+                        </p>
+                        <a href="{{path('recette_index')}}" class="btn btn-primary"> En savoir plus !</a>
+                    </div>
+            </div>
+              
+        </div>
+          <div class="col-md-4">
+              <div class="card bg-light mb-3">
+                    <div class="card-header text-center" style="background-color: #302d42">
+                          <strong> Traction </strong> <br>
+                       <small> pas encore noté </small>
+                    </div>
+                    <img src="/images/sport6.PNG" alt="Image de la recette"
+                    style="height:200PX, width: 100%; display: block" >
+                    <div class="card-body" style="background-color: #302d42">
+                        <h4 class="card-title">
+                           Programme de ouf !
+                        </h4>
+                        <p class="card-text">
+                              Un accès illimité aux séances de votre programme, un suivi de vos progrès en temps réel
+                             et un programme nutrition complet 
+                        </p>
+                        <a href="{{path('recette_index')}}" class="btn btn-primary"> En savoir plus !</a>
+                    </div>
+            </div>
+              
+        </div>
+          <div class="col-md-4">
+              <div class="card bg-light mb-3">
+                    <div class="card-header text-center" style="background-color: #302d42">
+                       <strong>Pompe / </strong> <br>
+                       <small> pas encore noté </small>
+                    </div>
+                    <img src="/images/sport6.PNG" alt="Image de la recette"
+                    style="height:200PX, width: 100%; display: block" >
+                    <div class="card-body" style="background-color: #302d42">
+                        <h4 class="card-title">
+                           Programme de ouf !
+                        </h4>
+                        <p class="card-text">
+                              Un accès illimité aux séances de votre programme, un suivi de vos progrès en temps réel
+                             et un programme nutrition complet 
+                        </p>
+                        <a href="{{path('recette_index')}}" class="btn btn-primary"> En savoir plus !</a>
+                    </div>
+            </div>
+              
+        </div>
+          
+
+     </div>
+       
+       <h2> Nos utilisateurs </h2>
+     <div class="row mt-3">
+         <div class="col">
+             <div class="card border-secondary mb-3">
+               <div class="card-body" style="background-color: #302d42">
+                    <h4 class="card-title"> Mike sylvestre </h4>
+
+                    <hr>
+                    <div class="card-text">
+                        <img src="http://placeholder.it/64X64" alt="Avatar de Mike" class="float-left mr-3">
+                        <p> Documentation and examples for opting images into responsive.</p>
+                        <a href="#" class="btn btn-primary float-right">En soir plus!</a>
+
+
+                    </div>
+
+               </div>
+             </div>
+         </div>
+         <div class="col">
+             <div class="card border-secondary mb-3">
+               <div class="card-body" style="background-color: #302d42">
+                    <h4 class="card-title"> Mike sylvestre </h4>
+
+                    <hr>
+                    <div class="card-text">
+                        <img src="http://placeholder.it/64X64" alt="Avatar de Mike" class="float-left mr-3">
+                        <p> Documentation and examples for opting images into responsive.</p>
+                        <a href="#" class="btn btn-primary float-right">En soir plus!</a>
+
+
+                    </div>
+
+               </div>
+             </div>
+         </div>
+     </div>
+
+</div>
+
+{% endblock %}

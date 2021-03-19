@@ -1,0 +1,43 @@
+{% block body%}
+
+    <div class="container">
+       {{form_start(form)}} 
+
+          <div class="row">
+
+                
+                   <div class="alert alert-formInsc">
+                      <h2> Modification d'une recette! </h2>
+                          <hr>
+                        <div class="row">
+                            <div class="col-md-6 col-xs-12">{{form_row(form.nom)}}</div>
+                            <div class="col-md-6 col-xs-12"> {{form_row(form.etape)}}</div>
+                            <div class="col-md-6 col-xs-12"> {{form_row(form.preparation)}}</div>
+                            <div class="col-md-6 col-xs-12">{{form_row(form.ingredient)}}</div>
+                            <div class="col-md-6 col-xs-12">{{form_row(form.temps_cuisson)}}</div>
+                            <div class="col-md-6 col-xs-12"> {{form_row(form.temps_total)}}</div>
+                            <div class="col-md-6 col-xs-12">{{form_row(form.photo)}}</div>
+                            <div class="col-md-6 col-xs-12"> {{form_row(form.description)}}</div>
+                        </div>
+                            
+                     
+                    <div class="">
+                     <a class="btn btn-primary  col-md-12" href="{{path('recette_index')}}">Créer une recette  </a>
+                  </div>
+                      
+                
+              </div>
+          </div>
+         
+          
+       {{form_end(form)}}
+    </div>
+
+{% endblock %}
+
+
+ 
+
+
+
+ 

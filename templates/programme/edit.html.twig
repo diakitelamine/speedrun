@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modification d'un Programme{% endblock %}
+
+{% block body %}
+
+    {{ include('programme/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('programme_index') }}" class="btn btn-secondary">Revenir a la liste</a>
+
+    {{ include('programme/_delete_form.html.twig') }}
+    
+{% endblock %}

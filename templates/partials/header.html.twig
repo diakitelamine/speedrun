@@ -1,0 +1,71 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark background">
+          <a class="navbar-brand" href="{{path('home')}}">SpeedRun</a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+         </button>
+
+          <div class="collapse navbar-collapse" id="navbarColor01">
+              <ul class="navbar-nav mr-auto">
+                 <li class="nav-item">
+                    <a class="nav-link" href="{{path('home')}}">Accueil
+                    <span class="sr-only">(current)</span></a>
+                  </li>
+                 <li class="nav-item ">
+                      <a class="nav-link" href="{{path('recette_index')}}">Recettes
+                      <span class="sr-only">(current)</span></a>
+                 </li>
+                 <li class="nav-item ">
+                      <a class="nav-link" href="{{path('eleve')}}">Mes éleves
+                      <span class="sr-only">(current)</span></a>
+                 </li>
+                  <li class="nav-item ">
+                      <a class="nav-link" href="{{path('programme_index')}}">Programme
+                      <span class="sr-only">(current)</span></a>
+                 </li>
+                 
+             </ul>
+             <ul class="navbar-nav ml-auto">
+                {% if app.user %}
+                    <li class="nav-item dropdown">
+                      <div class="dropdown">
+                             <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                                  <img src="{{app.user.ficture}}" class="avatar avatar-mini"  alt="Avatar de {{app.user.fullName}}">
+                                  {{app.user.fullName}}  
+                             </button>
+                      <div class="dropdown-menu">
+                         <a class="dropdown-item" href="{{path('programme_new')}}"><span class="fa fa-life-ring"></span> Créer un programme</a>
+                             <div class="dropdown-divider"></div>
+                         <a class="dropdown-item" href=""><span class="fa fa-wrench"></span> Mon compte</a>
+                         <a class="dropdown-item" href=""><span class="fa fa-rocket"></span> Voir mes recettes </a>
+                         <a class="dropdown-item" href=""><span class="fa fa-rocket"></span> Modifier le profil </a>
+                          <div class="dropdown-divider"></div>
+                         <a class="dropdown-item" href="{{path('app_logout')}}"><span class="fa fa-bullhorn"></span> Déconnexion</a>
+                      </div>
+                     </div>
+                  </li>
+                    
+                    {% else %}
+
+                       <form class="form-inline my-2 my-lg-0">
+                       <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                       <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                       </form>
+                         <hr>
+                        <li class="nav-item">
+                         <a href="{{path('app_register')}}" class="nav-link">
+                         Inscription </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="{{path('app_login')}}" class="nav-link">
+                         Connexion </a>
+                      </li>
+                  {% endif %}
+             </ul>
+          </div>
+
+          
+    </nav>
+
+  
+     

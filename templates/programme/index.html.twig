@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Programme sportif {% endblock %}
+
+{% block body %}
+
+  <div class="container">
+
+   <h1 class="text-center">  Les programmes sportifs</h1>
+        <hr/>
+      <table class="table table-hover  border border-dark">
+
+       <thead>
+            
+            <tr>
+
+              <th>Id</th>
+                <th>Nom</th>
+                <th>Description</th>
+                <th>Serie</th>
+                <th>Repetition</th>
+                <th>Repos</th>
+                <th>Temps_total</th>
+                <th>actions</th>
+            </tr>
+       </thead>
+
+
+       <tbody>
+        {% for programme in programmes %}
+            <tr>
+                <td>{{ programme.id }}</td>
+                <td>{{ programme.nom }}</td>
+                <td>{{ programme.description }}</td>
+                <td>{{ programme.serie }}</td>
+                <td>{{ programme.repetition }}</td>
+                <td>{{ programme.repos }}</td>
+                <td>{{ programme.tempsTotal }}</td>
+                <td>
+                    <a href="{{ path('programme_show', {'id': programme.id}) }}"  class="btn btn-primary">show</a>
+                    <a href="{{ path('programme_edit', {'id': programme.id}) }}"   class="btn btn-secondary">Modifier</a>
+                    <a href="{{ path('programme_delete', {'id': programme.id})}}" class="btn btn-danger">Supprimer </a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+
+      </table>
+         <a href="{{ path('programme_new') }}" class="btn btn-primary">Créer un programme</a>
+  </div>
+ 
+{% endblock %}

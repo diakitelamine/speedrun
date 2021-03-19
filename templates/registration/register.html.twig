@@ -1,0 +1,105 @@
+{%  extends 'base.html.twig' %}
+
+ {% block title %}Création d'un formulaire {% endblock%}
+ 
+ {% block body%}
+   <style>
+             
+           .card-effet {
+               animation: hoverEffect 60s infinite;
+               border-radius: 10px;
+               background-color:  rgba(48,45,66,1);;
+               margin-top: 20vh;
+            }
+            
+      @media screen and (max-width: 992px) {
+           .card-effet {
+               animation: hoverEffect 60s infinite;
+               border-radius: 10px;
+               background-color:  rgba(48,45,66,1);
+               margin-top: 1vh;
+            }
+      }
+      @keyframes hoverEffect {
+          from {
+            -webkit-box-shadow: 0px 5px 10px -5px rgba(248,174,107,1);
+            -moz-box-shadow: 0px 5px 10px -5px rgba(248,174,107,1);
+            box-shadow: 0px 5px 10px -5px rgba(248,174,107,1);
+         }
+         15% {
+            -webkit-box-shadow: -3px 3px 10px -5px rgba(248,174,107,1);
+            -moz-box-shadow: -3px 3px 10px -5px rgba(248,174,107,1);
+            box-shadow: -3px 3px 10px -5px rgba(248,174,107,1);
+         }
+         30% {
+            -webkit-box-shadow: -5px 0px 10px -5px rgba(248,174,107,1);
+            -moz-box-shadow: -5px 0px 10px -5px rgba(248,174,107,1);
+            box-shadow: -5px 0px 10px -5px rgba(248,174,107,1);
+         }
+         45% {
+            -webkit-box-shadow: -3px -3px 10px -5px rgba(248,174,107,1);
+            -moz-box-shadow: -3px -3px 10px -5px rgba(248,174,107,1);
+            box-shadow: -3px -3px 10px -5px rgba(248,174,107,1);
+         }
+         60% {
+            -webkit-box-shadow: 0px -5px 10px -5px rgba(248,174,107,1);
+            -moz-box-shadow: 0px -5px 10px -5px rgba(248,174,107,1);
+            box-shadow: 0px -5px 10px -5px rgba(248,174,107,1);
+         }
+         75% {
+            -webkit-box-shadow: 3px -3px 10px -5px rgba(248,174,107,1);
+            -moz-box-shadow: 3px -3px 10px -5px rgba(248,174,107,1);
+            box-shadow: 3px -3px 10px -5px rgba(248,174,107,1);
+         }
+         75% {
+            -webkit-box-shadow: 5px 0px 10px -5px rgba(248,174,107,1);
+            -moz-box-shadow: 5px 0px 10px -5px rgba(248,174,107,1);
+            box-shadow: 5px 0px 10px -5px rgba(248,174,107,1);
+         }
+         90% {
+            -webkit-box-shadow: 3px 3px 10px -5px rgba(248,174,107,1);
+            -moz-box-shadow: 3px 3px 10px -5px rgba(248,174,107,1);
+            box-shadow: 3px 3px 10px -5px rgba(248,174,107,1);
+         }
+         to {
+            -webkit-box-shadow: 0px 5px 10px -5px rgba(248,174,107,1);
+            -moz-box-shadow: 0px 5px 10px -5px rgba(248,174,107,1);
+            box-shadow: 0px 5px 10px -5px rgba(248,174,107,1);
+         }
+      }
+   </style>
+    <div class="container">
+       {{form_start(registrationForm)}} 
+         <h1 class="text-center"> Devenir Coach SpeedRun </h1>
+         <div class="card col-md-10 offset-md-1 card-effet">
+            {# <div class="col-md-10 offset-md-1">
+                 <img  height="210" src="images/Speed_Run_logo.PNG" class="card-img-top" alt="..."> 
+            </div> #}
+            <div class="row">    
+                   <div class="alert alert-formInsc">
+                        <div class="row">
+                            <div class="col-md-4 col-xs-12"> {{form_row(registrationForm.firstname)}}</div>
+                            <div class="col-md-4 col-xs-12"> {{form_row(registrationForm.lastname)}}</div>
+                            <div class="col-md-4 col-xs-12"> {{form_row(registrationForm.email)}}</div>
+                            <div class="col-md-6 col-xs-12"> {{form_row(registrationForm.password)}}</div>
+                            <div class="col-md-6 col-xs-12"> {{form_row(registrationForm.password2)}}</div>
+                            <div class="col-md-6 col-xs-12"> {{form_row(registrationForm.diplome)}}</div>
+                            <div class="col-md-6 col-xs-12"> {{form_row(registrationForm.siret)}} </div>
+                        </div>
+                            
+                        <div>
+                          <div class="container-btn">
+                          <a class="btn btn-primary col-md-12" href="{{path('app_login')}}"> Inscription !</a>
+                       </div>
+
+                      </div>
+               </div>
+            </div>
+         </div>
+          
+         
+          
+       {{form_end(registrationForm)}}
+    </div>
+
+{% endblock %}

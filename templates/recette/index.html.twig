@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Recette index{% endblock %}
+
+{% block body %}
+    <h1 class="text-center">Liste des recettes</h1>
+    <hr/>
+  <div class="container">
+    <table class="table table-hover  border border-dark">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Description</th>
+                <th>Preparation</th>
+                 <th>ingredien</th>
+                <th>Temps cuisson</th>
+                <th>Temps total</th>
+                <th>Photo</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for recette in recettes %}
+            <tr>
+                <td>{{ recette.id }}</td>
+                <td>{{ recette.nom }}</td>
+                <td>{{ recette.description }}</td>
+                <td>{{ recette.preparation }}</td>
+                <td>{{ recette.ingredient }}</td>
+                <td>{{ recette.tempsTotal }}</td>
+                <td>{{ recette.tempsCuisson }}</td>
+                <td>{{ recette.photo }}</td>
+                
+                <td>
+                    <a href="{{ path('recette_show', {'id': recette.id}) }}"  class="btn btn-primary">show</a>
+                    <a href="{{ path('recette_edit', {'id': recette.id}) }}"   class="btn btn-secondary">Modifier</a>
+                    <a href="{{ path('recette_delete', {'id': recette.id})}}" class="btn btn-danger">Supprimer </a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+     <a href="{{ path('recette_new') }}">Créer une recette</a>
+   </div> 
+
+{% endblock %}
+
+
+
