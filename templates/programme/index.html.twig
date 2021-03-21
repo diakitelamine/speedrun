@@ -1,93 +1,56 @@
-
 {% extends 'base.html.twig' %}
 
-{% block title %}Programme index{% endblock %}
+{% block title %} Programme sportif {% endblock %}
 
 {% block body %}
-    <h1 class="text-center">Liste des programmes</h1>
-    <hr/>
+
   <div class="container">
 
-   <table class="table table-hover  border border-dark">
-  <thead>
-    <tr>
-       <th scope="col">ID</th>
-         <th scope="col">Nom</th>
-         <th scope="col">Etape</th>
-        <th scope="col">Preparation</th>
-        <th scope="col">ingredien</th>
-        <th scope="col">Temps cuisson</th>
-        <th scope="col">Temps total</th>
-        <th scope="col">Photo</th>
-        <th scope="col">Description</th>
-         <th>actions</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Salade</td>
-      <td>3 etaps</td>
-      <td>10mn</td>
-      <td>sel, moyonnaise, salade</td>
-      <td>0mn</td>
-      <td>15m</td>
-      <td>http://placeholder.it/64X64</td>
-      <td>1 g de sel, deux tomates</td>
-      <td>
-        <a href="{{ path('detailpro') }}"  class="btn btn-primary">show</a>
-         <a href="{{ path('detailpro') }}"   class="btn btn-secondary">Modifier</a>
-        <a href="{{ path('detailpro')}}" class="btn btn-danger">Supprimer </a>
-      </td>
-    </tr>
+   <h1 class="text-center">  Les programmes sportifs</h1>
+        <hr/>
+      <table class="table table-hover  border border-dark">
 
-    <tr>
+       <thead>
+            
+            <tr>
 
-         <th scope="row">1</th>
-      <td>Salade</td>
-      <td>3 etaps</td>
-      <td>10mn</td>
-      <td>sel, moyonnaise, salade</td>
-      <td>0mn</td>
-      <td>15m</td>
-      <td>http://placeholder.it/64X64</td>
-      <td>1 g de sel, deux tomates</td>
-      <td>
-         <a href="{{ path('detailpro') }}"  class="btn btn-primary">show</a>
-         <a href="{{ path('detailpro') }}"   class="btn btn-secondary">Modifier</a>
-        <a href="{{ path('detailpro')}}" class="btn btn-danger">Supprimer </a>
-      </td>
-    </tr>
+              <th>Id</th>
+                <th>Nom</th>
+                <th>Description</th>
+                <th>Serie</th>
+                <th>Repetition</th>
+                <th>Repos</th>
+                <th>Temps_total</th>
+                <th>actions</th>
+            </tr>
+       </thead>
 
-    <tr>
-        <th scope="row">1</th>
-      <td>Salade</td>
-      <td>3 etaps</td>
-      <td>10mn</td>
-      <td>sel, moyonnaise, salade</td>
-      <td>0mn</td>
-      <td>15m</td>
-      <td>http://placeholder.it/64X64</td>
-      <td>1 g de sel, deux tomates</td>
-      <td>
-        <a href="{{ path('detailpro') }}"  class="btn btn-primary">show</a>
-         <a href="{{ path('detailpro') }}"   class="btn btn-secondary">Modifier</a>
-        <a href="{{ path('detailpro')}}" class="btn btn-danger">Supprimer </a>
-      </td>
-    </tr>
 
-  </tbody>
- </table>
-</div>
+       <tbody>
+        {% for programme in programmes %}
+            <tr>
+                <td>{{ programme.id }}</td>
+                <td>{{ programme.nom }}</td>
+                <td>{{ programme.description }}</td>
+                <td>{{ programme.serie }}</td>
+                <td>{{ programme.repetition }}</td>
+                <td>{{ programme.repos }}</td>
+                <td>{{ programme.tempsTotal }}</td>
+                <td>
+                    <a href="{{ path('programme_show', {'id': programme.id}) }}"  class="btn btn-primary">show</a>
+                    <a href="{{ path('programme_edit', {'id': programme.id}) }}"   class="btn btn-secondary">Modifier</a>
+                    <a href="{{ path('programme_delete', {'id': programme.id})}}" class="btn btn-danger">Supprimer </a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
 
+      </table>
+         <a href="{{ path('programme_new') }}" class="btn btn-primary">Créer un programme</a>
+  </div>
+ 
 {% endblock %}
-
-
-
-
-
-
-
-
-
-
