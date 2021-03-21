@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Programme{% endblock %}
+
+{% block body %}
+
+ <div class="container">
+    
+
+    <table class="table">
+
+    <h1 class="text-center  my-5" >Détail d'un programme</h1>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>1</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>salade</td>
+            </tr>
+            
+            <tr>
+                <th>Preparation</th>
+                <td>3 etapes</td>
+            </tr>
+              <tr>
+                <th>Ingredient</th>
+                <td>1g de sel, mayonnaise </td>
+            </tr>
+            
+            <tr>
+                <th>Temps de Cuisson</th>
+                <td>0mn</td>
+            </tr>
+            
+
+            <tr>
+                <th>Temps total</th>
+                <td>15mn</td>
+            </tr>
+            <tr>
+                <th>Photo</th>
+                <td>http://placeholder.it/64X64</td>
+            </tr>
+
+            <tr>
+                <th>Description</th>
+                <td>1 g de sel, deux tomates</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <a href="{{ path('recette_index') }}">Revenir a la liste</a>
+
+    {# <a href="{{ path('recette_edit', {'id': recette.id}) }}">edit</a> #}
+
+    {# {{ include('recette/_delete_form.html.twig') }} #}
+  </div>
+{% endblock %}
+
+
