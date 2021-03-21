@@ -1,38 +1,58 @@
 
 {% block body%}
 
-    <div class="container">
-       {{form_start(form)}} 
 
-          <div class="row">
+<div class="container">
+             <form>
 
-                
-                   <div class="alert alert-formInsc">
-                        <h2 class="text-center"> Modification d'un programme! </h2>
-                          <hr>
-                        <div class="row">
-                            <div class="col-md-6 col-xs-12">{{form_row(form.nom)}}</div>
-                            <div class="col-md-6 col-xs-12">  {{form_row(form.serie)}}</div>
-                            <div class="col-md-6 col-xs-12">{{form_row(form.repetition)}}</div>
-                            <div class="col-md-6 col-xs-12">  {{form_row(form.repos)}}</div>
-                            <div class="col-md-6 col-xs-12"> {{form_row(form.temps_total)}}</div>
-                             <div class="col-md-6 col-xs-12"> {{form_row(form.description)}}</div>
-                            
-                              
-                        </div>
-                        <div> 
-                            <a class="btn btn-primary  col-md-12" href="{{path('programme_index')}}">Créer un programme  </a>
-                         </div>
-                            
-                  </div>
-                      
-                
-              </div>
-          </div>
-         
-          
-       {{form_end(form)}}
-    </div>
+               <h1 class="text-center">Modification d'un programme</h1>
+               <fieldset>
+                 
+                 <div class="form-group">
+                   <label for="nom">Nom de programme</label>
+                   <input type="text" class="form-control" id="nom" placeholder="Prendre forme">
+                 </div>
+
+                 <div class="form-group">
+                   <label for="nom">Serie</label>
+                   <input type="text" class="form-control" id="nom" placeholder=" 1" >
+                 </div>
+                 
+                 <div class="form-group">
+                   <label for="nom">Repetition</label>
+                   <input type="text" class="form-control" id="nom" placeholder="5">
+                 </div>
+
+                 <div class="form-group">
+                   <label for="nom">Repos</label>
+                   <input type="text" class="form-control" id="nom"  placeholder=" 1mn">
+                 </div>
+
+                 
+                 <div class="form-group">
+                   <label for="nom">Temps total</label>
+                   <input type="text" class="form-control" id="nom"  placeholder=" 30mn">
+                 </div>
+
+                 <div class="form-group">
+                     <label for="fichier">photo</label>
+                     <input type="file" class="form-control-file" id="fichier">
+                 </div>
+                 
+                 
+                 <div class="form-group">
+                   <label for="bio">Description</label>
+                   <textarea class="form-control" id="bio" rows="3" placeholder="4 pompes, 2 tractions"></textarea>
+                 </div>
+                  
+                  <div>
+                        <div class="container-btn">
+                          <a class="btn btn-primary col-md-12" href="{{path('programme_index')}}">Créer un programme!</a>
+                       </div>
+                  </div>     
+               </fieldset>
+             </form>
+         </div>
 
 {% endblock %}
 

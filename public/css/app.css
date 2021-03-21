@@ -1,100 +1,63 @@
- div.carousel-caption{
 
-    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
- }
-div.containers, div.containers-fluid{
-    margin-top: 20px;
-}
- 
- div.ad-title{
-  padding: 2em;
-  background-size: cover;
-  background-position: center center;
- }
-
-div.ad-title h1, div.ad-title{
-
-    color:white;
-    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);  
-
-}
-  /** 
- * Mise en forme de bouton Réserver et titre de l'annonce 
- */
-   div.ad-title .btn{
-
-     margin-top: 2em;
-     font-size: 1.5em;
-     line-height: 1.5em;
-   }
-  /** 
- * Mise en forme de l'avatar 
- */
-.avatar{
-     max-width: 128px;
-     max-height: 128px;
-     border-radius: 50%;
-}
-  /** 
- * Mise en forme de l'avatar(annonce) 
- */
-.avatar-medium{
-    max-width: 64px;
-    max-height: 64px;
-    
-}
- /** 
- * Mise en forme de l'avatar (connexion)
- */
- .avatar-mini{
-     max-width: 24px ;
-     max-height: 24px;
- }
-
- .avatar-micro{
-
-   max-width: 23px;
-   max-height: 23px;
- }
-
- .datepicker table tr td.today.disabled, .datepicker table tr td.today.disabled:hover{
-
-    color: firebrick !important;
- }
- 
- span.rating i {
-      
-    color:goldenrod;
- }
-
- .alert a{
-
-    text-decoration: none;
- }
-
- .alert .btn{
-
-    color: white;
- }
-
-
- .roll {
-   background-color: #302D43;
+.card-effet {
+   animation: hoverEffect 60s infinite;
+   border-radius: 10px;
+   background-color:  rgba(48,45,66,1);;
+   margin-top: 20vh;
 }
 
-.background{
-   background-color: #302D43;
+@media screen and (max-width: 992px) {
+.card-effet {
+   animation: hoverEffect 60s infinite;
+   border-radius: 10px;
+   background-color:  rgba(48,45,66,1);
+   margin-top: 1vh;
 }
-
-.alert-formInsc{
-  background-color: #302D43;
 }
-
-
-.row{
-   width: 65%;
-   justify-content: space-around;
+@keyframes hoverEffect {
+from {
+-webkit-box-shadow: 0px 5px 10px -5px rgba(248,174,107,1);
+-moz-box-shadow: 0px 5px 10px -5px rgba(248,174,107,1);
+box-shadow: 0px 5px 10px -5px rgba(248,174,107,1);
 }
-
-
-
+15% {
+-webkit-box-shadow: -3px 3px 10px -5px rgba(248,174,107,1);
+-moz-box-shadow: -3px 3px 10px -5px rgba(248,174,107,1);
+box-shadow: -3px 3px 10px -5px rgba(248,174,107,1);
+}
+30% {
+-webkit-box-shadow: -5px 0px 10px -5px rgba(248,174,107,1);
+-moz-box-shadow: -5px 0px 10px -5px rgba(248,174,107,1);
+box-shadow: -5px 0px 10px -5px rgba(248,174,107,1);
+}
+45% {
+-webkit-box-shadow: -3px -3px 10px -5px rgba(248,174,107,1);
+-moz-box-shadow: -3px -3px 10px -5px rgba(248,174,107,1);
+box-shadow: -3px -3px 10px -5px rgba(248,174,107,1);
+}
+60% {
+-webkit-box-shadow: 0px -5px 10px -5px rgba(248,174,107,1);
+-moz-box-shadow: 0px -5px 10px -5px rgba(248,174,107,1);
+box-shadow: 0px -5px 10px -5px rgba(248,174,107,1);
+}
+75% {
+-webkit-box-shadow: 3px -3px 10px -5px rgba(248,174,107,1);
+-moz-box-shadow: 3px -3px 10px -5px rgba(248,174,107,1);
+box-shadow: 3px -3px 10px -5px rgba(248,174,107,1);
+}
+75% {
+-webkit-box-shadow: 5px 0px 10px -5px rgba(248,174,107,1);
+-moz-box-shadow: 5px 0px 10px -5px rgba(248,174,107,1);
+box-shadow: 5px 0px 10px -5px rgba(248,174,107,1);
+}
+90% {
+-webkit-box-shadow: 3px 3px 10px -5px rgba(248,174,107,1);
+-moz-box-shadow: 3px 3px 10px -5px rgba(248,174,107,1);
+box-shadow: 3px 3px 10px -5px rgba(248,174,107,1);
+}
+to {
+-webkit-box-shadow: 0px 5px 10px -5px rgba(248,174,107,1);
+-moz-box-shadow: 0px 5px 10px -5px rgba(248,174,107,1);
+box-shadow: 0px 5px 10px -5px rgba(248,174,107,1);
+}
+}

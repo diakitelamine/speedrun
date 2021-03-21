@@ -3,71 +3,7 @@
  {% block title %}Création d'un formulaire {% endblock%}
  
  {% block body%}
-   <style>
-             
-           .card-effet {
-               animation: hoverEffect 60s infinite;
-               border-radius: 10px;
-               background-color:  rgba(48,45,66,1);;
-               margin-top: 20vh;
-            }
-            
-      @media screen and (max-width: 992px) {
-           .card-effet {
-               animation: hoverEffect 60s infinite;
-               border-radius: 10px;
-               background-color:  rgba(48,45,66,1);
-               margin-top: 1vh;
-            }
-      }
-      @keyframes hoverEffect {
-          from {
-            -webkit-box-shadow: 0px 5px 10px -5px rgba(248,174,107,1);
-            -moz-box-shadow: 0px 5px 10px -5px rgba(248,174,107,1);
-            box-shadow: 0px 5px 10px -5px rgba(248,174,107,1);
-         }
-         15% {
-            -webkit-box-shadow: -3px 3px 10px -5px rgba(248,174,107,1);
-            -moz-box-shadow: -3px 3px 10px -5px rgba(248,174,107,1);
-            box-shadow: -3px 3px 10px -5px rgba(248,174,107,1);
-         }
-         30% {
-            -webkit-box-shadow: -5px 0px 10px -5px rgba(248,174,107,1);
-            -moz-box-shadow: -5px 0px 10px -5px rgba(248,174,107,1);
-            box-shadow: -5px 0px 10px -5px rgba(248,174,107,1);
-         }
-         45% {
-            -webkit-box-shadow: -3px -3px 10px -5px rgba(248,174,107,1);
-            -moz-box-shadow: -3px -3px 10px -5px rgba(248,174,107,1);
-            box-shadow: -3px -3px 10px -5px rgba(248,174,107,1);
-         }
-         60% {
-            -webkit-box-shadow: 0px -5px 10px -5px rgba(248,174,107,1);
-            -moz-box-shadow: 0px -5px 10px -5px rgba(248,174,107,1);
-            box-shadow: 0px -5px 10px -5px rgba(248,174,107,1);
-         }
-         75% {
-            -webkit-box-shadow: 3px -3px 10px -5px rgba(248,174,107,1);
-            -moz-box-shadow: 3px -3px 10px -5px rgba(248,174,107,1);
-            box-shadow: 3px -3px 10px -5px rgba(248,174,107,1);
-         }
-         75% {
-            -webkit-box-shadow: 5px 0px 10px -5px rgba(248,174,107,1);
-            -moz-box-shadow: 5px 0px 10px -5px rgba(248,174,107,1);
-            box-shadow: 5px 0px 10px -5px rgba(248,174,107,1);
-         }
-         90% {
-            -webkit-box-shadow: 3px 3px 10px -5px rgba(248,174,107,1);
-            -moz-box-shadow: 3px 3px 10px -5px rgba(248,174,107,1);
-            box-shadow: 3px 3px 10px -5px rgba(248,174,107,1);
-         }
-         to {
-            -webkit-box-shadow: 0px 5px 10px -5px rgba(248,174,107,1);
-            -moz-box-shadow: 0px 5px 10px -5px rgba(248,174,107,1);
-            box-shadow: 0px 5px 10px -5px rgba(248,174,107,1);
-         }
-      }
-   </style>
+
     <div class="container">
        {{form_start(registrationForm)}} 
          <h1 class="text-center"> Devenir Coach SpeedRun </h1>
