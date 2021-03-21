@@ -1,20 +1,62 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ProfilController!{% endblock %}
+{% block title %}Recette{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+ <div class="container">
+    
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/hp/Pictures/mocdo/commande/src/Controller/ProfilController.php'|file_link(0) }}">src/Controller/ProfilController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/hp/Pictures/mocdo/commande/templates/profil/index.html.twig'|file_link(0) }}">templates/profil/index.html.twig</a></code></li>
-    </ul>
-</div>
+    <table class="table">
+
+    <h1 class="text-center  my-5" >Détail de la recette</h1>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>1</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>salade</td>
+            </tr>
+            
+            <tr>
+                <th>Preparation</th>
+                <td>3 etapes</td>
+            </tr>
+              <tr>
+                <th>Ingredient</th>
+                <td>1g de sel, mayonnaise </td>
+            </tr>
+            
+            <tr>
+                <th>Temps de Cuisson</th>
+                <td>0mn</td>
+            </tr>
+            
+
+            <tr>
+                <th>Temps total</th>
+                <td>15mn</td>
+            </tr>
+            <tr>
+                <th>Photo</th>
+                <td>http://placeholder.it/64X64</td>
+            </tr>
+
+            <tr>
+                <th>Description</th>
+                <td>1 g de sel, deux tomates</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <a href="{{ path('recette_index') }}">Revenir a la liste</a>
+
+    {# <a href="{{ path('recette_edit', {'id': recette.id}) }}">edit</a> #}
+
+    {# {{ include('recette/_delete_form.html.twig') }} #}
+  </div>
 {% endblock %}
+

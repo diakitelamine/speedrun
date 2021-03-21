@@ -1,0 +1,94 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello Profil1Controller!{% endblock %}
+
+{% block body %}
+<div class="container emp-profile">
+            <form method="post">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-img">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
+                            <div class="file btn btn-lg btn-primary">
+                                Change Photo
+                                <input type="file" name="file"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="profile-head">
+                                    <h5>
+                                        Kshiti Ghelani
+                                    </h5>
+                                    <h3>
+                                        Coach
+                                    </h3>
+                                    <p class="proile-rating"></span></p>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <a  href="{{path('app_register')}}" class="btn btn-primary"> Edit profil </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="tab-content profile-tab" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>User Id</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Kshiti123</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>firstname</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Fofana</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>lastname</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Kadija</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Email</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>kshitighelani@gmail.com</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Dipôme</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>xxxxxxxxx</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Siret</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>124156373839404848474</p>
+                                            </div>
+                                        </div>
+                                        
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </form>           
+        </div>
+{% endblock %}
