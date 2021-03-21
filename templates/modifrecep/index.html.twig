@@ -1,20 +1,63 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ModifrecepController!{% endblock %}
+{% block body%}
 
-{% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <div class="container">
+             <form>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+               <h1 class="text-center">Modification d'une recette</h1>
+               <fieldset>
+                 
+                 <div class="form-group">
+                   <label for="nom">Nom de la recette</label>
+                   <input type="text" class="form-control" id="nom" placeholder="Salades">
+                 </div>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/hp/Downloads/Symfony/src/Controller/ModifrecepController.php'|file_link(0) }}">src/Controller/ModifrecepController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/hp/Downloads/Symfony/templates/modifrecep/index.html.twig'|file_link(0) }}">templates/modifrecep/index.html.twig</a></code></li>
-    </ul>
-</div>
+                 <div class="form-group">
+                   <label for="nom">Etape</label>
+                   <input type="text" class="form-control" id="nom" placeholder=" 3 etapes" >
+                 </div>
+                 
+                 <div class="form-group">
+                   <label for="nom">Preparation</label>
+                   <input type="text" class="form-control" id="nom" placeholder="10mn">
+                 </div>
+
+                 <div class="form-group">
+                   <label for="nom">Ingredient</label>
+                   <input type="text" class="form-control" id="nom"  placeholder="sel, mayonnaise, salade">
+                 </div>
+
+                 
+                 <div class="form-group">
+                   <label for="nom">Temps de cuisson</label>
+                   <input type="text" class="form-control" id="nom"  placeholder=" 0mn">
+                 </div>
+
+                 <div class="form-group">
+                   <label for="nom">Temps total</label>
+                   <input type="text" class="form-control" id="nom"  placeholder="15mn ">
+                 </div>
+
+                   <div class="form-group">
+                     <label for="fichier">Photo</label>
+                     <input type="file" class="form-control-file" id="fichier">
+                 </div>
+                 
+                 <div class="form-group">
+                   <label for="bio">Description</label>
+                   <textarea class="form-control" id="bio" rows="3" placeholder="1g de sel, de l'huile"></textarea>
+                 </div>
+                  
+                  <div>
+                        <div class="container-btn">
+                          <a class="btn btn-primary col-md-12" href="{{path('profil1')}}">Créer une recette!</a>
+                       </div>
+                  </div>     
+               </fieldset>
+             </form>
+         </div>
+
 {% endblock %}
+
+
