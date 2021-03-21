@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Recette{% endblock %}
+{% block title %}Programme{% endblock %}
 
 {% block body %}
 
@@ -9,7 +9,7 @@
 
     <table class="table">
 
-    <h1 class="text-center  my-5" >Détail de la recette</h1>
+    <h1 class="text-center  my-5" >Détail d'une recette</h1>
         <tbody>
             <tr>
                 <th>Id</th>
@@ -52,7 +52,7 @@
         </tbody>
     </table>
 
-    <a href="{{path('recetliste') }}">Revenir a la liste</a>
+    <a href="{{ path('recetliste') }}">Revenir a la liste</a>
 
     {# <a href="{{ path('recette_edit', {'id': recette.id}) }}">edit</a> #}
 
