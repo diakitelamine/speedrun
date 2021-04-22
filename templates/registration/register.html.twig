@@ -63,14 +63,14 @@
               redirect: 'follow'
              };
 
-          fetch("http://localhost:3000/web/register", requestOptions)
+          fetch("https:/le-roi-mike.herokuapp.com/web/register", requestOptions)
            .then(response => response.text())
            .then(result => console.log(result))
            .catch(error => console.log('error', error));
 
             console.log("ok");
                var settings = {
-               "url": "http://localhost:3000/web/register",
+               "url": "https://le-roi-mike.herokuapp.com/web/register",
                "method": "POST",
                "headers": {
                   "Content-Type": "application/x-www-form-urlencoded",
