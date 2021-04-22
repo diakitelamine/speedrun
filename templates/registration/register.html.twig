@@ -43,7 +43,7 @@
           
        </form>
 
-        <script type="text/javascript">
+          <script type="text/javascript">
           
          function register(){
             document.querySelector("#form").addEventListener("click", function(event) {
@@ -57,62 +57,35 @@
             "siret": $('#siret').val(), "diplome": $('#diplome').val()});
 
             var requestOptions = {
-            method: 'POST',
-            path:''
-            headers: myHeaders,
-            body: raw,
-            redirect: '/home'
-            };
+              method: 'POST',
+              headers: myHeaders,
+              body: raw,
+              redirect: 'follow'
+             };
 
-            fetch("http://localhost:3000/web/register", requestOptions)
-            .then(response => response.text())
-            .then(result => console.log(result))
-            .catch(error => console.log('error', error));
+          fetch("http://localhost:3000/web/register", requestOptions)
+           .then(response => response.text())
+           .then(result => console.log(result))
+           .catch(error => console.log('error', error));
 
-               console.log("ok");
+            console.log("ok");
                var settings = {
                "url": "http://localhost:3000/web/register",
                "method": "POST",
                "headers": {
                   "Content-Type": "application/x-www-form-urlencoded",
                },
-               "data": {"email": $('#email').val(),"password": $('#password').val(),"confirmPassword": $('#passwordconfirm').val(),"name": $('#firstname').val()},
+               "data": {"email": $('#email').val(),"password": $('#password').val(),"confirmPassword": $('#passwordconfirm').val(),"firstname": $('#firstname').val(), "lastname": $('#lastname').val(),
+               "siret": $('#siret').val(), "diplome": $('#diplome').val()},
                "success": function(){
                   alert('ok')
                }, "error": function (){
                   alert('ko')
                }
             };
-            
+
          }
    
     </script>
-    </div>
-
-         
-       {# </form>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
-        <script type="text/javascript">
-          
-         function register(){
-            document.querySelector("#form").addEventListener("click", function(event) {
-            event.preventDefault();
-            }, false)
-
-            
-            var xhr = new XMLHttpRequest();
-            xhr.withCredentials = true;
-
-            xhr.addEventListener("readystatechange", function() {
-            if(this.readyState === 4) {
-               console.log(this.responseText);
-            }
-            });
-
-            xhr.open("GET",  "https://floating-depths-79393.herokuapp.com/");
-              xhr.send();
-         }
-   
-    </script> #}
 
 {% endblock %}
