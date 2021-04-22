@@ -3,9 +3,12 @@
  {% block title %}Création d'un formulaire {% endblock%}
  
  {% block body%}
+   {# <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script> #}
+
+   
 
     <div class="container">
-       {{form_start(registrationForm)}} 
+      <form action="" method="post" id="form" >
          <h1 class="text-center"> Devenir Coach SpeedRun </h1>
          <div class="card col-md-10 offset-md-1 card-effet">
             {# <div class="col-md-10 offset-md-1">
@@ -13,19 +16,24 @@
             </div> #}
             <div class="row">    
                    <div class="alert alert-formInsc">
-                        <div class="row">
-                            <div class="col-md-4 col-xs-12"> {{form_row(registrationForm.firstname)}}</div>
-                            <div class="col-md-4 col-xs-12"> {{form_row(registrationForm.lastname)}}</div>
-                            <div class="col-md-4 col-xs-12"> {{form_row(registrationForm.email)}}</div>
-                            <div class="col-md-6 col-xs-12"> {{form_row(registrationForm.password)}}</div>
-                            <div class="col-md-6 col-xs-12"> {{form_row(registrationForm.password2)}}</div>
-                            <div class="col-md-6 col-xs-12"> {{form_row(registrationForm.diplome)}}</div>
-                            <div class="col-md-6 col-xs-12"> {{form_row(registrationForm.siret)}} </div>
+                        <div class="row"> 
+                          <div class="form-group">
+                              <input text="text" name="email" id="email"  class="form-control"  
+                              placeholder=" Votre email...">
+                       </div>
+                          <div class="col-md-4 col-xs-12"> <input id="firstname" class="form-control" name="firstname" type="text" placeholder="Votre nom..."></div>
+                            <div class="col-md-4 col-xs-12"> <input id="lastname" class="form-control" name="lastname" type="text" placeholder="Votre prénom..."></div>
+                            <div class="col-md-6 col-xs-12"> <input id="password" class="form-control" name="password" type="text" placeholder="Votre mot de passe..."></div>
+                             
+                            <div class="col-md-6 col-xs-12"> <input id="passwordconfirm" class="form-control" name="passwordconfirm" type="text" placeholder="Confirmation mot de passe..."></div>
+                           
+                            <div class="col-md-6 col-xs-12"> <input id="diplome" class="form-control" name="diplome" type="text" placeholder="Votre diplôme..."></div>
+                            <div class="col-md-6 col-xs-12"> <input id="siret" class="form-control" name="siret" type="text" placeholder="N° de SIRET..."></div>
                         </div>
                             
                         <div>
                           <div class="container-btn">
-                            <a class="btn btn-primary col-md-12" href="{{path('app_login')}}"> Inscription !</a>
+                           <input type="submit" value="inscription" class="btn btn-primary" id="inscription" onclick="register()" >
                           </div>
 
                       </div>
@@ -33,9 +41,78 @@
             </div>
          </div>
           
-         
+       </form>
+
+        <script type="text/javascript">
           
-       {{form_end(registrationForm)}}
+         function register(){
+            document.querySelector("#form").addEventListener("click", function(event) {
+            event.preventDefault();
+            }, false)
+
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+
+            var raw = JSON.stringify({"email": $('#email').val(),"password": $('#password').val(),"confirmPassword": $('#passwordconfirm').val(),"firstname": $('#firstname').val(), "lastname": $('#lastname').val(),
+            "siret": $('#siret').val(), "diplome": $('#diplome').val()});
+
+            var requestOptions = {
+            method: 'POST',
+            path:''
+            headers: myHeaders,
+            body: raw,
+            redirect: '/home'
+            };
+
+            fetch("http://localhost:3000/web/register", requestOptions)
+            .then(response => response.text())
+            .then(result => console.log(result))
+            .catch(error => console.log('error', error));
+
+               console.log("ok");
+               var settings = {
+               "url": "http://localhost:3000/web/register",
+               "method": "POST",
+               "headers": {
+                  "Content-Type": "application/x-www-form-urlencoded",
+               },
+               "data": {"email": $('#email').val(),"password": $('#password').val(),"confirmPassword": $('#passwordconfirm').val(),"name": $('#firstname').val()},
+               "success": function(){
+                  alert('ok')
+               }, "error": function (){
+                  alert('ko')
+               }
+            };
+            
+         }
+   
+    </script>
     </div>
+
+         
+       {# </form>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+        <script type="text/javascript">
+          
+         function register(){
+            document.querySelector("#form").addEventListener("click", function(event) {
+            event.preventDefault();
+            }, false)
+
+            
+            var xhr = new XMLHttpRequest();
+            xhr.withCredentials = true;
+
+            xhr.addEventListener("readystatechange", function() {
+            if(this.readyState === 4) {
+               console.log(this.responseText);
+            }
+            });
+
+            xhr.open("GET",  "https://floating-depths-79393.herokuapp.com/");
+              xhr.send();
+         }
+   
+    </script> #}
 
 {% endblock %}
